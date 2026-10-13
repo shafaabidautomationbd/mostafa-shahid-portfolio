@@ -160,3 +160,17 @@
 #skillDetail,#projectDetail{display:none!important}
 @media(max-width:1000px){.skill-grid,.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.skill-grid,.project-grid{grid-template-columns:1fr}}
+
+/* Skills: remove outer skill cards; keep every detail visible directly in the section */
+#skillGrid.skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px;align-items:start}
+#skillGrid .skill-card{display:block;min-width:0;min-height:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;cursor:default}
+#skillGrid .skill-card:hover{transform:none;border:0;background:transparent}
+#skillGrid .skill-card>.card-no{display:none}
+#skillGrid .skill-card h3{margin:0 0 7px;font-size:18px}
+#skillGrid .skill-card>p{margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.65}
+#skillGrid .skill-card .detail-badge-grid{display:grid;grid-template-columns:1fr;gap:9px;margin:0}
+#skillGrid .skill-card .detail-badge-card{display:flex;flex-direction:row;align-items:flex-start;gap:10px;padding:0;border:0;border-radius:0;background:transparent;overflow-wrap:anywhere}
+#skillGrid .skill-card .detail-badge{flex:0 0 auto;margin-top:1px}
+#skillGrid .skill-card .detail-badge-card strong{font-size:13px;line-height:1.6}
+#skillGrid .skill-card .detail-badge-card p{margin:2px 0 0;font-size:12px;line-height:1.6}
+@media(max-width:760px){#skillGrid.skill-grid{grid-template-columns:1fr}}
