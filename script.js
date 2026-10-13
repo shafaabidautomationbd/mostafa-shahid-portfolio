@@ -33,4 +33,5 @@ if(sb){document.querySelectorAll(".skill-card").forEach(x=>x.classList.remove("a
 const pb=e.target.closest("[data-project]");
 if(pb){document.querySelectorAll(".project-card").forEach(x=>x.classList.remove("active"));pb.classList.add("active");const item=projects[Number(pb.dataset.project)];document.querySelector("#projectDetail").innerHTML='<span class="eyebrow">'+item.tag+'</span><h3>'+item.title+'</h3><p>'+item.summary+'</p>'+renderItems(item.details,"project")+(item.reports?'<a href="reports.html#english">Read web achievement report ↓</a>':'');}
 });
+renderCards();
 document.querySelector("#year").textContent=new Date().getFullYear();
