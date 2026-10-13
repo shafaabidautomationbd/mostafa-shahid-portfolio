@@ -25,3 +25,21 @@
   body .hero-portrait { order:0 !important; width:min(100%,320px) !important; margin:0 auto 16px !important; }
   body .hero-copy { order:1 !important; width:100% !important; }
 }
+
+/* Technical training records */
+.training-panel{padding:clamp(18px,3vw,30px);border:1px solid var(--line);border-radius:10px;background:linear-gradient(145deg,#101a23,#0d1218);box-shadow:0 18px 48px #0002}
+.training-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px}
+.training-heading h3{font-size:23px;line-height:1.3;margin:8px 0 0}
+.training-heading p{max-width:520px;color:var(--muted);font-size:14px;margin:0}
+.training-table-wrap{width:100%;overflow-x:auto;border:1px solid #284252;border-radius:8px}
+.training-table{width:100%;border-collapse:collapse;min-width:820px;font-size:13px;line-height:1.55}
+.training-table th{background:#092b3a;color:#eaf6ff;font-weight:800;text-align:center;padding:15px 12px;border:1px solid #18516a}
+.training-table td{padding:15px 12px;border:1px solid var(--line);color:#e4eaf0;text-align:center;vertical-align:middle}
+.training-table tbody tr:nth-child(even){background:#ffffff04}
+.training-table td:nth-child(1){color:var(--accent);font-family:'DM Mono',monospace;font-weight:700}
+.training-table td:nth-child(2){text-align:left;font-weight:700;min-width:180px}
+.training-table td:nth-child(6),.training-table td:nth-child(7){min-width:150px}
+.training-note{margin-top:18px;padding:16px 18px;border:1px solid #344b43;border-radius:7px;background:#c5f36b08}
+.training-note strong{color:var(--accent);font-size:14px}
+.training-note p{margin:5px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
+@media(max-width:760px){.training-heading{display:block}.training-heading p{margin-top:10px}.training-table{min-width:760px}.training-panel{padding:15px}}
