@@ -87,3 +87,12 @@
 .timeline article p{max-width:900px;line-height:1.8}
 .timeline article p strong{color:var(--text)}
 @media(max-width:760px){.responsibility-grid{grid-template-columns:1fr}.responsibility-grid article{padding:18px}}
+
+/* Compact left/right badges for VFD and motor-control skill details */
+#skillDetail ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#skillDetail li{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0;padding:17px 18px 17px 20px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(135deg,#121b20,#0e1419);font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+#skillDetail li:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent);border-radius:8px 0 0 8px}
+#skillDetail li strong{font-size:15px;color:var(--text);font-weight:700}
+#skillDetail li span{color:var(--muted);font-size:12px}
+#skillDetail li:not(:has(strong)){display:list-item;list-style-position:inside}
+@media(max-width:760px){#skillDetail ul{grid-template-columns:1fr}#skillDetail li{padding:15px 16px 15px 19px}}
