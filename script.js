@@ -22,16 +22,10 @@ const reports=[
 {title:"Siemens S7-200 PLC Password & Program Recovery",language:"SIEMENS S7-200 / PLC RECOVERY",path:"reports.html#version-b"}
 ];
 function renderItems(items,kind){return '<div class="detail-badge-grid">'+items.map((item,i)=>{const d=typeof item==="string"?{badge:(kind==="project"?"PROJECT":"CAPABILITY")+" / "+String(i+1).padStart(2,"0"),title:item,text:""}:item;return '<article class="detail-badge-card"><span class="detail-badge">'+(d.badge||("DETAIL / "+String(i+1).padStart(2,"0")))+'</span><strong>'+d.title+'</strong>'+(d.text?'<p>'+d.text+'</p>':'')+'</article>';}).join("")+'</div>';}
+function renderItems(items,kind){return '<div class="detail-badge-grid">'+items.map((item,i)=>{const d=typeof item==="string"?{badge:(kind==="project"?"PROJECT":"CAPABILITY")+" / "+String(i+1).padStart(2,"0"),title:item,text:""}:item;return '<article class="detail-badge-card"><span class="detail-badge">'+(d.badge||("DETAIL / "+String(i+1).padStart(2,"0")))+'</span><strong>'+d.title+'</strong>'+(d.text?'<p>'+d.text+'</p>':'')+'</article>';}).join("")+'</div>';}
 function renderCards(){
-document.querySelector("#skillGrid").innerHTML=skills.map((s,i)=>'<button type="button" class="skill-card" data-skill="'+i+'"><span class="card-no">SKILL / '+String(i+1).padStart(2,"0")+'</span><h3>'+s.title+'</h3><p>'+s.summary+'</p></button>').join("");
-document.querySelector("#projectGrid").innerHTML=projects.map((p,i)=>'<button type="button" class="project-card" data-project="'+i+'"><span class="card-no">'+p.tag+'</span><h3>'+p.title+'</h3><p>'+p.summary+'</p></button>').join("");
+document.querySelector("#skillGrid").innerHTML=skills.map((s,i)=>'<article class="skill-card"><span class="card-no">SKILL / '+String(i+1).padStart(2,"0")+'</span><h3>'+s.title+'</h3><p>'+s.summary+'</p>'+renderItems(s.details,"skill")+'</article>').join("");
+document.querySelector("#projectGrid").innerHTML=projects.map((p,i)=>'<article class="project-card"><span class="card-no">'+p.tag+'</span><h3>'+p.title+'</h3><p>'+p.summary+'</p>'+renderItems(p.details,"project")+(p.reports?'<a href="reports.html#english">Read web achievement report ↓</a>':'')+'</article>').join("");
 document.querySelector("#reportGrid").innerHTML=reports.map(r=>'<article class="report-card"><span class="card-no">WEB REPORT / '+r.language+'</span><h3>'+r.title+'</h3><p>Read the full report content as a page in this website theme. No PDF opens.</p><a href="'+r.path+'">Read report ↗</a></article>').join("");
 }
-document.addEventListener("click",e=>{
-const sb=e.target.closest("[data-skill]");
-if(sb){document.querySelectorAll(".skill-card").forEach(x=>x.classList.remove("active"));sb.classList.add("active");const item=skills[Number(sb.dataset.skill)];document.querySelector("#skillDetail").innerHTML='<span class="eyebrow">TECHNICAL SKILL</span><h3>'+item.title+'</h3><p>'+item.summary+'</p>'+renderItems(item.details,"skill");}
-const pb=e.target.closest("[data-project]");
-if(pb){document.querySelectorAll(".project-card").forEach(x=>x.classList.remove("active"));pb.classList.add("active");const item=projects[Number(pb.dataset.project)];document.querySelector("#projectDetail").innerHTML='<span class="eyebrow">'+item.tag+'</span><h3>'+item.title+'</h3><p>'+item.summary+'</p>'+renderItems(item.details,"project")+(item.reports?'<a href="reports.html#english">Read web achievement report ↓</a>':'');}
-});
-renderCards();
 document.querySelector("#year").textContent=new Date().getFullYear();
