@@ -174,3 +174,14 @@
 #skillGrid .skill-card .detail-badge-card strong{font-size:13px;line-height:1.6}
 #skillGrid .skill-card .detail-badge-card p{margin:2px 0 0;font-size:12px;line-height:1.6}
 @media(max-width:760px){#skillGrid.skill-grid{grid-template-columns:1fr}}
+
+
+/* FINAL OVERRIDE: force inline skill details to remain visible on mobile and desktop */
+#skillGrid .skill-card .detail-badge-grid{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;margin:12px 0 0!important}
+#skillGrid .skill-card .detail-badge-card{display:flex!important;flex-direction:row!important;align-items:flex-start!important;gap:10px!important;padding:10px 0!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;background:transparent!important}
+#skillGrid .skill-card .detail-badge{display:inline-flex!important;flex:0 0 auto!important;margin-top:1px!important}
+#skillGrid .skill-card .detail-badge-card strong{display:block!important;font-size:13px!important;line-height:1.6!important}
+#skillGrid .skill-card .detail-badge-card p{display:block!important;margin:2px 0 0!important;font-size:12px!important;line-height:1.6!important}
+#skillGrid .skill-card{display:block!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+#skillGrid .skill-card>.card-no{display:none!important}
+#skillDetail{display:none!important}
