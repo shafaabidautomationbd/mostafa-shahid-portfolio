@@ -134,3 +134,14 @@
 #skillDetail .detail-badge,#projectDetail .detail-badge{color:#55a6ff;border-color:#2787f555;background:#2787f510}
 .detail-panel a{color:var(--accent)}
 @media(max-width:760px){#skillDetail .detail-badge-grid,#projectDetail .detail-badge-grid{grid-template-columns:1fr}}
+
+/* Fix empty capability section: restore the three-column selectable card grid */
+.skill-grid,.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.skill-card,.project-card{display:block;width:100%;min-width:0;text-align:left;padding:22px 20px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--text);cursor:pointer;min-height:145px}
+.skill-card:hover,.project-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.skill-card.active,.project-card.active{border-color:var(--accent);background:#101923}
+.skill-card h3,.project-card h3{margin:12px 0 7px;font-size:16px}
+.skill-card p,.project-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+#skillDetail,#projectDetail{display:block!important}
+@media(max-width:900px){.skill-grid,.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.skill-grid,.project-grid{grid-template-columns:1fr}}
