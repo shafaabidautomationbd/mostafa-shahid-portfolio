@@ -185,3 +185,17 @@
 #skillGrid .skill-card{display:block!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
 #skillGrid .skill-card>.card-no{display:none!important}
 #skillDetail{display:none!important}
+
+
+/* Simplified skills layout: plain headings and readable detail lists */
+#skillGrid.skill-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:30px 42px!important;align-items:start!important}
+#skillGrid .skill-card{display:block!important;min-width:0!important;padding:0 0 22px!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;cursor:default!important}
+#skillGrid .skill-card:hover{transform:none!important;border-color:var(--line)!important;background:transparent!important}
+#skillGrid .skill-card h3{margin:0 0 7px!important;font-size:19px!important;line-height:1.4!important;letter-spacing:-.3px!important}
+#skillGrid .skill-card>p{margin:0 0 14px!important;color:var(--muted)!important;font-size:13px!important;line-height:1.65!important}
+#skillGrid .skill-details{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;list-style:none!important;margin:0!important;padding:0!important}
+#skillGrid .skill-details li{position:relative!important;display:block!important;min-width:0!important;padding:0 0 0 16px!important;border:0!important;background:transparent!important;font-size:13px!important;line-height:1.65!important;overflow-wrap:anywhere!important}
+#skillGrid .skill-details li:before{content:""!important;position:absolute!important;left:0!important;top:.68em!important;width:6px!important;height:6px!important;border-radius:50%!important;background:var(--accent)!important}
+#skillGrid .skill-details li strong{display:block!important;font-size:13px!important;font-weight:600!important;line-height:1.6!important;color:var(--text)!important}
+#skillGrid .skill-details li span{display:block!important;margin-top:2px!important;color:var(--muted)!important;font-size:12px!important;line-height:1.6!important}
+@media(max-width:760px){#skillGrid.skill-grid{grid-template-columns:1fr!important;gap:24px!important}#skillGrid .skill-card{padding-bottom:19px!important}#skillGrid .skill-card h3{font-size:18px!important}}
