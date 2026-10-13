@@ -96,3 +96,11 @@
 #skillDetail li span{color:var(--muted);font-size:12px}
 #skillDetail li:not(:has(strong)){display:list-item;list-style-position:inside}
 @media(max-width:760px){#skillDetail ul{grid-template-columns:1fr}#skillDetail li{padding:15px 16px 15px 19px}}
+
+/* Shared badge-card layout for every skill and project detail panel */
+#skillDetail ul,#projectDetail ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#skillDetail li,#projectDetail li{display:flex;flex-direction:column;align-items:flex-start;gap:9px;min-width:0;padding:17px 18px 17px 20px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(135deg,#121b20,#0e1419);font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+.detail-badge{display:inline-flex;align-items:center;max-width:100%;padding:5px 8px;border:1px solid #c5f36b35;border-radius:4px;background:#c5f36b10;color:var(--accent);font:10px 'DM Mono',monospace;letter-spacing:.7px}
+#skillDetail li strong,#projectDetail li strong{font-size:14px;line-height:1.55;color:var(--text);font-weight:700}
+#skillDetail li span:not(.detail-badge),#projectDetail li span:not(.detail-badge){font-size:12px;line-height:1.65;color:var(--muted)}
+@media(max-width:760px){#skillDetail ul,#projectDetail ul{grid-template-columns:1fr}#skillDetail li,#projectDetail li{padding:15px 16px 15px 19px}}
