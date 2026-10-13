@@ -11,3 +11,17 @@
 .portrait-caption strong{font-size:22px;letter-spacing:-.5px}
 .portrait-caption>span:last-child{font-size:12px;color:var(--muted)}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding:68px 7vw 48px;gap:36px}.hero-portrait{width:min(100%,310px);justify-self:center;grid-row:1}.hero-copy{grid-row:2}h1{letter-spacing:-3px}.stats{gap:22px;flex-wrap:wrap}.portrait-caption strong{font-size:20px}}
+
+/* Final layout correction: keep the portrait in a dedicated right-hand column */
+@media (min-width: 761px) {
+  body .hero { display:grid !important; grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr) !important; align-items:center !important; column-gap:clamp(36px,6vw,90px) !important; }
+  body .hero-copy { grid-column:1 !important; grid-row:1 !important; }
+  body .hero-portrait { grid-column:2 !important; grid-row:1 !important; width:100% !important; max-width:390px !important; justify-self:center !important; align-self:center !important; margin:0 auto !important; }
+  body .hero-portrait img { width:100% !important; aspect-ratio:4/5 !important; height:auto !important; object-fit:cover !important; }
+  body .hero .stats { grid-column:1 !important; }
+}
+@media (max-width:760px) {
+  body .hero { display:flex !important; flex-direction:column !important; align-items:stretch !important; }
+  body .hero-portrait { order:0 !important; width:min(100%,320px) !important; margin:0 auto 16px !important; }
+  body .hero-copy { order:1 !important; width:100% !important; }
+}
