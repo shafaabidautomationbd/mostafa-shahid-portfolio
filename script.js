@@ -27,4 +27,10 @@ document.querySelector("#skillGrid").innerHTML=skills.map((s,i)=>'<button type="
 document.querySelector("#projectGrid").innerHTML=projects.map((p,i)=>'<button type="button" class="project-card" data-project="'+i+'"><span class="card-no">'+p.tag+'</span><h3>'+p.title+'</h3><p>'+p.summary+'</p></button>').join("");
 document.querySelector("#reportGrid").innerHTML=reports.map(r=>'<article class="report-card"><span class="card-no">WEB REPORT / '+r.language+'</span><h3>'+r.title+'</h3><p>Read the full report content as a page in this website theme. No PDF opens.</p><a href="'+r.path+'">Read report ↗</a></article>').join("");
 }
+document.addEventListener("click",e=>{
+const sb=e.target.closest("[data-skill]");
+if(sb){document.querySelectorAll(".skill-card").forEach(x=>x.classList.remove("active"));sb.classList.add("active");const item=skills[Number(sb.dataset.skill)];document.querySelector("#skillDetail").innerHTML='<span class="eyebrow">TECHNICAL SKILL</span><h3>'+item.title+'</h3><p>'+item.summary+'</p>'+renderItems(item.details,"skill");}
+const pb=e.target.closest("[data-project]");
+if(pb){document.querySelectorAll(".project-card").forEach(x=>x.classList.remove("active"));pb.classList.add("active");const item=projects[Number(pb.dataset.project)];document.querySelector("#projectDetail").innerHTML='<span class="eyebrow">'+item.tag+'</span><h3>'+item.title+'</h3><p>'+item.summary+'</p>'+renderItems(item.details,"project")+(item.reports?'<a href="reports.html#english">Read web achievement report ↓</a>':'');}
+});
 document.querySelector("#year").textContent=new Date().getFullYear();
