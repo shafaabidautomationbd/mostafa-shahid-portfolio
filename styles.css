@@ -145,3 +145,18 @@
 #skillDetail,#projectDetail{display:block!important}
 @media(max-width:900px){.skill-grid,.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.skill-grid,.project-grid{grid-template-columns:1fr}}
+
+/* All skill and project details stay visible inside each card */
+.skill-grid,.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:stretch}
+.skill-card,.project-card{display:flex;flex-direction:column;align-items:stretch;width:100%;min-width:0;text-align:left;padding:20px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--text);cursor:default;min-height:0}
+.skill-card:hover,.project-card:hover{transform:none}
+.skill-card h3,.project-card h3{margin:12px 0 7px;font-size:16px}
+.skill-card>p,.project-card>p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+.skill-card .detail-badge-grid,.project-card .detail-badge-grid{display:grid;grid-template-columns:1fr;gap:8px;margin-top:16px}
+.skill-card .detail-badge-card,.project-card .detail-badge-card{display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0;padding:11px 12px;border:1px solid var(--line);border-radius:6px;background:#0d141c;overflow-wrap:anywhere}
+.skill-card .detail-badge,.project-card .detail-badge{color:var(--accent);border-color:#2787f555;background:#2787f510}
+.skill-card .detail-badge-card strong,.project-card .detail-badge-card strong{font-size:13px;line-height:1.55;color:var(--text)}
+.skill-card .detail-badge-card p,.project-card .detail-badge-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+#skillDetail,#projectDetail{display:none!important}
+@media(max-width:1000px){.skill-grid,.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.skill-grid,.project-grid{grid-template-columns:1fr}}
