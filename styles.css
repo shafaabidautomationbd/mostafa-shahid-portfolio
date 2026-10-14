@@ -429,3 +429,8 @@
  .hero-avatar{width:min(86.4%,378px)!important;max-width:378px!important;}
 }
 @media(max-width:420px){.hero-avatar{width:86.4%!important;max-width:351px!important;}}
+
+
+/* Mobile portrait: another 10% reduction, relative to current size */
+@media(max-width:760px){.hero-avatar{width:min(77.76%,340px)!important;max-width:340px!important}}
+@media(max-width:420px){.hero-avatar{width:77.76%!important;max-width:316px!important}}
