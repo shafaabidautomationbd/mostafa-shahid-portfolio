@@ -279,3 +279,11 @@
 .contact-icon-only.facebook-link{color:#f28c28;background:rgba(242,140,40,.12)}
 .contact-icon-only:hover{transform:translateY(-2px);border-color:var(--accent)}
 @media(max-width:600px){.contact-icon-links{gap:8px;margin-left:8px}.contact-icon-only{width:44px;height:44px;border-radius:11px}.contact-icon-only svg{width:23px;height:23px}}
+
+
+/* Final fix: keep social icons small and inline with email button */
+.contact-card .contact-icon-links{display:inline-flex!important;flex-direction:row!important;align-items:center;justify-content:flex-start;gap:10px;margin:0 0 0 12px;vertical-align:middle;width:auto;max-width:none}
+.contact-card .contact-icon-only{display:inline-flex!important;flex:0 0 46px!important;width:46px!important;min-width:46px;height:46px!important;max-width:46px;padding:10px;align-items:center;justify-content:center;box-sizing:border-box}
+.contact-card .contact-icon-only svg{display:block!important;width:24px!important;height:24px!important;max-width:24px!important;max-height:24px!important;min-width:24px;min-height:24px;fill:currentColor}
+.contact-card .btn.primary{display:inline-flex;vertical-align:middle;margin:0}
+@media(max-width:600px){.contact-card .contact-icon-links{display:inline-flex!important;flex-direction:row!important;gap:8px;margin-left:8px}.contact-card .contact-icon-only{flex-basis:42px!important;width:42px!important;min-width:42px;height:42px!important;max-width:42px;padding:9px}.contact-card .contact-icon-only svg{width:22px!important;height:22px!important;max-width:22px!important;max-height:22px!important;min-width:22px;min-height:22px}}
