@@ -434,3 +434,8 @@
 /* Mobile portrait: another 10% reduction, relative to current size */
 @media(max-width:760px){.hero-avatar{width:min(77.76%,340px)!important;max-width:340px!important}}
 @media(max-width:420px){.hero-avatar{width:77.76%!important;max-width:316px!important}}
+
+
+/* Final mobile portrait size: 5 percent smaller than the current setting */
+@media(max-width:760px){.hero-avatar{width:min(73.872%,323px)!important;max-width:323px!important}}
+@media(max-width:420px){.hero-avatar{width:73.872%!important;max-width:300px!important}}
