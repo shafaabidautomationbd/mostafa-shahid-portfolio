@@ -216,3 +216,14 @@
 .contact-card>span{margin-top:8px}
 .contact-card>a:not(.btn){overflow-wrap:anywhere}
 @media(max-width:600px){.contact-socials{grid-template-columns:1fr}.social-link{padding:13px}.contact{gap:24px}}
+
+
+/* Modern vector social icons */
+.social-icon{width:44px;height:44px;flex-basis:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;padding:10px;transition:transform .22s ease,box-shadow .22s ease}
+.social-icon svg{display:block;width:100%;height:100%;fill:currentColor}
+.whatsapp-icon{background:rgba(37,211,102,.13);color:#25d366}
+.facebook-icon{background:rgba(24,119,242,.14);color:#4b9bff}
+.social-link:hover .social-icon{transform:scale(1.06)}
+.whatsapp-link:hover .social-icon{box-shadow:0 0 24px rgba(37,211,102,.18)}
+.facebook-link:hover .social-icon{box-shadow:0 0 24px rgba(24,119,242,.2)}
+@media(prefers-reduced-motion:reduce){.social-icon,.social-link{transition:none}}
