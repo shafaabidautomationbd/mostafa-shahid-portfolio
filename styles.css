@@ -373,3 +373,12 @@
  .top.nav-open .mobile-nav-toggle span:nth-child(2){opacity:0}
  .top.nav-open .mobile-nav-toggle span:last-child{transform:translateY(-7px) rotate(-45deg)}
 }
+
+
+/* Pin mobile hamburger to the top-right of the header */
+@media(max-width:760px){
+ .top{position:sticky;top:0;display:flex;flex-wrap:wrap;align-items:center}
+ .identity{flex:1 1 auto!important;width:auto;min-width:0;order:1}
+ .mobile-nav-toggle{display:flex!important;order:2;margin-left:auto;align-self:center}
+ .top nav{order:3!important;width:100%}
+}
