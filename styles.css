@@ -304,3 +304,12 @@
 
 /* Keep Reports visible in the mobile navigation */
 @media(max-width:760px){.top nav a[href="#about"],.top nav a[href="#training"]{display:none}.top nav{justify-content:flex-start}.top nav a[href="#achievements"]{color:var(--accent)}}
+
+
+/* Restore all navigation links; scroll horizontally on small screens */
+@media(max-width:760px){
+ .top nav a[href="#about"],.top nav a[href="#training"]{display:inline-flex!important}
+ .top nav{display:flex;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:20px;scrollbar-width:none}
+ .top nav::-webkit-scrollbar{display:none}
+ .top nav a{flex:0 0 auto}
+}
