@@ -238,3 +238,14 @@
 .identity-copy small{font-size:10px;color:var(--muted);white-space:nowrap}
 @media(max-width:1050px){.top{padding:0 4vw;gap:12px}nav{gap:13px;font-size:11px}.identity{min-width:0}.identity-copy small{max-width:210px;overflow:hidden;text-overflow:ellipsis}}
 @media(max-width:760px){.top{height:auto;min-height:72px;padding:10px 5vw;flex-wrap:wrap}.identity{flex:1}.header-avatar{width:42px;height:42px;flex-basis:42px}.identity-copy strong{font-size:13px}.identity-copy small{max-width:220px;font-size:9px}.top nav{order:3;width:100%;overflow-x:auto;padding:4px 0 8px;gap:20px;white-space:nowrap}.navbtn{font-size:10px;padding:8px 10px}}
+
+
+/* Restored full home hero with profile portrait and name */
+.hero{min-height:620px;padding:72px 10vw 78px;display:flex;align-items:center;background:radial-gradient(ellipse at 18% 40%,rgba(39,135,245,.13),transparent 42%),linear-gradient(130deg,#0b0e12,#0d1318)}
+.hero-profile{width:100%;max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(220px,350px) minmax(0,1fr);align-items:center;gap:clamp(34px,7vw,94px)}
+.hero-avatar{display:block;width:100%;max-width:340px;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:22px;border:1px solid #2787f5;box-shadow:0 24px 80px rgba(0,0,0,.38),0 0 0 7px rgba(39,135,245,.08)}
+.hero-copy h1{font-size:clamp(50px,6.2vw,84px);letter-spacing:-4px;line-height:.98;margin:22px 0}
+.hero-copy .lead{font-size:clamp(16px,1.7vw,21px);line-height:1.5}
+.hero-copy .intro{max-width:560px;line-height:1.8}
+.hero-copy .actions{margin-bottom:0;flex-wrap:wrap}
+@media(max-width:760px){.hero{padding:40px 6vw 50px;min-height:0}.hero-profile{grid-template-columns:1fr;gap:28px}.hero-avatar{width:190px;max-width:58%;aspect-ratio:4/5;margin:0 auto;border-radius:18px}.hero-copy h1{font-size:clamp(48px,13vw,68px);letter-spacing:-2.5px;margin:16px 0}.hero-copy .intro{font-size:15px}.hero-copy .actions{margin-top:22px}}
