@@ -382,3 +382,15 @@
  .mobile-nav-toggle{display:flex!important;order:2;margin-left:auto;align-self:center}
  .top nav{order:3!important;width:100%}
 }
+
+
+/* Fixed icon navigation bar at the bottom of mobile screens */
+.mobile-bottom-nav{display:none}
+@media(max-width:760px){
+ body{padding-bottom:76px}
+ .mobile-bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;padding:9px 4px calc(9px + env(safe-area-inset-bottom));background:rgba(11,14,18,.96);border-top:1px solid var(--line);backdrop-filter:blur(16px)}
+ .mobile-bottom-nav a{display:flex;min-width:0;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:var(--muted);font-size:9px;line-height:1.2;text-align:center}
+ .mobile-bottom-nav svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+ .mobile-bottom-nav a:hover,.mobile-bottom-nav a:focus-visible{color:var(--accent)}
+ html{scroll-padding-bottom:88px}
+}
