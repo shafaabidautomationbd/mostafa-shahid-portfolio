@@ -269,3 +269,13 @@
 .section+.section{border-top:1px solid var(--line)}
 @media(max-width:760px){.section{padding-top:42px;padding-bottom:42px}}
 @media(max-width:600px){.section{padding-top:36px;padding-bottom:36px}.section-head{margin-bottom:18px}}
+
+
+/* Icon-only social actions beside email CTA */
+.contact-icon-links{display:inline-flex;align-items:center;gap:12px;margin:0 0 0 12px;vertical-align:middle}
+.contact-icon-only{width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:12px;transition:transform .2s,border-color .2s,background .2s}
+.contact-icon-only svg{width:25px;height:25px;fill:currentColor}
+.contact-icon-only.whatsapp-link{color:#25d366;background:rgba(37,211,102,.1)}
+.contact-icon-only.facebook-link{color:#f28c28;background:rgba(242,140,40,.12)}
+.contact-icon-only:hover{transform:translateY(-2px);border-color:var(--accent)}
+@media(max-width:600px){.contact-icon-links{gap:8px;margin-left:8px}.contact-icon-only{width:44px;height:44px;border-radius:11px}.contact-icon-only svg{width:23px;height:23px}}
