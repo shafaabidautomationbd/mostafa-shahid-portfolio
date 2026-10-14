@@ -358,3 +358,18 @@
  .section{padding-left:5vw;padding-right:5vw}
  .btn{font-size:12px;padding:11px 13px}
 }
+
+
+/* Mobile navigation toggle button */
+.mobile-nav-toggle{display:none;appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--text);width:44px;height:42px;border-radius:10px;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+.mobile-nav-toggle span{display:block;width:19px;height:2px;background:currentColor;border-radius:2px;transition:transform .2s,opacity .2s}
+@media(max-width:760px){
+ .top{position:sticky;top:0}
+ .mobile-nav-toggle{display:flex;order:2;flex:0 0 44px}
+ .top nav{display:none!important;order:3;width:100%;padding:10px 0 12px;flex-direction:column;align-items:stretch;gap:0;overflow:visible;border-top:1px solid var(--line)}
+ .top.nav-open nav{display:flex!important}
+ .top nav a{display:flex!important;align-items:center;min-height:43px;padding:8px 4px;border-bottom:1px solid rgba(255,255,255,.045)}
+ .top.nav-open .mobile-nav-toggle span:first-child{transform:translateY(7px) rotate(45deg)}
+ .top.nav-open .mobile-nav-toggle span:nth-child(2){opacity:0}
+ .top.nav-open .mobile-nav-toggle span:last-child{transform:translateY(-7px) rotate(-45deg)}
+}
