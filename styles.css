@@ -249,3 +249,14 @@
 .hero-copy .intro{max-width:560px;line-height:1.8}
 .hero-copy .actions{margin-bottom:0;flex-wrap:wrap}
 @media(max-width:760px){.hero{padding:40px 6vw 50px;min-height:0}.hero-profile{grid-template-columns:1fr;gap:28px}.hero-avatar{width:190px;max-width:58%;aspect-ratio:4/5;margin:0 auto;border-radius:18px}.hero-copy h1{font-size:clamp(48px,13vw,68px);letter-spacing:-2.5px;margin:16px 0}.hero-copy .intro{font-size:15px}.hero-copy .actions{margin-top:22px}}
+
+
+/* Keep direct contact actions together in the contact card */
+.contact-card .contact-socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;max-width:100%}
+.contact-card .social-link{flex:1 1 145px;min-width:0;padding:10px 12px;gap:9px}
+.contact-card .social-icon{width:36px;height:36px;flex-basis:36px;padding:8px;border-radius:10px}
+.contact-card .social-link>span:nth-child(2){gap:0}
+.contact-card .social-link strong{font-size:12px}
+.contact-card .social-link small{font-size:10px}
+.contact-card .social-link>b{font-size:12px}
+@media(max-width:600px){.contact-card .contact-socials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.contact-card .social-link{padding:9px 8px;gap:7px}.contact-card .social-icon{width:32px;height:32px;flex-basis:32px}.contact-card .social-link strong{font-size:11px}.contact-card .social-link small{font-size:9px}}
