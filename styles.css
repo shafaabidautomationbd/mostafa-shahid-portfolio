@@ -439,3 +439,14 @@
 /* Final mobile portrait size: 5 percent smaller than the current setting */
 @media(max-width:760px){.hero-avatar{width:min(73.872%,323px)!important;max-width:323px!important}}
 @media(max-width:420px){.hero-avatar{width:73.872%!important;max-width:300px!important}}
+
+
+/* Compact favicon-style marks beside employers in work experience */
+.timeline .company-heading{display:flex;align-items:center;gap:12px;margin:8px 0 10px;min-width:0}
+.timeline .company-heading h3{margin:0;min-width:0;line-height:1.4}
+.company-favicon{width:34px;height:34px;flex:0 0 34px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #f28c2866;border-radius:9px;background:linear-gradient(145deg,#1b2229,#10151a);color:#f28c28;font:800 9px Manrope,Arial,sans-serif;letter-spacing:-.3px;box-shadow:0 3px 12px #0002}
+.company-favicon.abulkhair{color:#dbe5ef;border-color:#8d9aa866;background:linear-gradient(145deg,#26313d,#11161c)}
+.company-favicon.mostafa{color:#f3c9a1;background:linear-gradient(145deg,#3b2920,#171310);border-color:#f3c9a155}
+.company-favicon.kycr{color:#d9e4ee;border-color:#b8c8d866;background:linear-gradient(145deg,#283744,#11161c)}
+.company-favicon.rsrm{color:#f28c28}
+@media(max-width:600px){.timeline .company-heading{gap:10px}.company-favicon{width:32px;height:32px;flex-basis:32px;border-radius:8px}.timeline .company-heading h3{font-size:17px}}
