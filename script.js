@@ -30,3 +30,8 @@ document.querySelector("#reportGrid").innerHTML=reports.map((r,i)=>'<article cla
 }
 renderCards();
 document.querySelector("#year").textContent="2023";
+
+// Accessible mobile navigation toggle
+const mobileNavToggle=document.querySelector(".mobile-nav-toggle");
+const siteHeader=document.querySelector(".top");
+if(mobileNavToggle&&siteHeader){mobileNavToggle.addEventListener("click",()=>{const open=siteHeader.classList.toggle("nav-open");mobileNavToggle.setAttribute("aria-expanded",String(open));mobileNavToggle.setAttribute("aria-label",open?"Close navigation menu":"Open navigation menu");});siteHeader.querySelectorAll("nav a").forEach(link=>link.addEventListener("click",()=>{siteHeader.classList.remove("nav-open");mobileNavToggle.setAttribute("aria-expanded","false");mobileNavToggle.setAttribute("aria-label","Open navigation menu");}));}
