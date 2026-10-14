@@ -26,7 +26,7 @@ function renderItems(items,kind){return '<div class="detail-badge-grid">'+items.
 function renderCards(){
 document.querySelector("#skillGrid").innerHTML=skills.map((s,i)=>'<article class="skill-card"><h3>'+s.title+'</h3><p>'+s.summary+'</p><ul class="skill-details">'+s.details.map(item=>{const d=typeof item==="string"?{title:item,text:""}:item;return '<li><strong>'+d.title+'</strong>'+(d.text?'<span>'+d.text+'</span>':'')+'</li>';}).join("")+'</ul></article>').join("");
 document.querySelector("#projectGrid").innerHTML=projects.map((p,i)=>'<article class="project-card"><span class="card-no">'+p.tag+'</span><h3>'+p.title+'</h3><p>'+p.summary+'</p>'+renderItems(p.details,"project")+(p.reports?'<a href="reports.html#english">Read web achievement report ↓</a>':'')+'</article>').join("");
-document.querySelector("#reportGrid").innerHTML=reports.map(r=>'<article class="report-card"><span class="card-no">WEB REPORT / '+r.language+'</span><h3>'+r.title+'</h3><p>Read the full report content as a page in this website theme. No PDF opens.</p><a href="'+r.path+'">Read report ↗</a></article>').join("");
+document.querySelector("#reportGrid").innerHTML=reports.map((r,i)=>'<article class="report-card"><span class="card-no">REPORT '+String(i+1).padStart(2,"0")+' / '+r.language+'</span><h3>'+r.title+'</h3><p>Open the report with numbered pages for easy reading.</p><a href="'+r.path+'">Open report ↗</a></article>').join("");
 }
 renderCards();
 document.querySelector("#year").textContent="2023";
