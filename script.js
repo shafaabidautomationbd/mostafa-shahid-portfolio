@@ -29,4 +29,4 @@ document.querySelector("#projectGrid").innerHTML=projects.map((p,i)=>'<article c
 document.querySelector("#reportGrid").innerHTML=reports.map(r=>'<article class="report-card"><span class="card-no">WEB REPORT / '+r.language+'</span><h3>'+r.title+'</h3><p>Read the full report content as a page in this website theme. No PDF opens.</p><a href="'+r.path+'">Read report ↗</a></article>').join("");
 }
 renderCards();
-document.querySelector("#year").textContent=new Date().getFullYear();
+document.querySelector("#year").textContent="2023";
