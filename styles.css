@@ -422,3 +422,10 @@
  nav.mobile-bottom-nav>a>svg{display:block!important;visibility:visible!important;opacity:1!important;width:22px!important;height:22px!important;flex:none!important}
  nav.mobile-bottom-nav>a>span{display:block!important;visibility:visible!important;opacity:1!important;white-space:nowrap!important;font-size:9px!important}
 }
+
+
+/* User-requested adjustment: portrait 10% smaller on mobile */
+@media(max-width:760px){
+ .hero-avatar{width:min(86.4%,378px)!important;max-width:378px!important;}
+}
+@media(max-width:420px){.hero-avatar{width:86.4%!important;max-width:351px!important;}}
