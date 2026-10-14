@@ -394,3 +394,14 @@
  .mobile-bottom-nav a:hover,.mobile-bottom-nav a:focus-visible{color:var(--accent)}
  html{scroll-padding-bottom:88px}
 }
+
+
+/* Larger hero portrait on mobile */
+@media(max-width:760px){
+ .hero-portrait{width:min(88%,360px)!important;max-width:360px!important;justify-self:center}
+ .portrait-frame{padding:9px;border-radius:20px}
+ .portrait-frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:13px}
+}
+@media(max-width:420px){
+ .hero-portrait{width:92%!important;max-width:340px!important}
+}
